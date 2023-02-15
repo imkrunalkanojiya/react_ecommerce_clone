@@ -1,0 +1,234 @@
+.sidebarmenu{
+    position: fixed;
+    background-color: #ddd;
+    top: 0;
+    animation: sidebar 0.6s forwards;
+    width: 250px;
+    height: 100vh;
+    overflow-y: scroll;
+    z-index: 200;
+    .heading{
+        .close-icon{
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px 20px;
+            img{
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    .sidebar-box{
+        padding: 0px 20px;
+        .product-size{
+            margin: 10px 0px;
+            .size-heading{
+                display: flex;
+                align-items: center;
+                margin-bottom: 5px;
+                h4{
+                    font-size: 18px;
+                    color: $primaryColor;
+    
+                    @include desktop1024px{
+                        font-size: 14px;
+                    }
+                    @include tablet768px{
+                        font-size: 12px;
+                    }
+                }
+                span{
+                    font-size: 24px;
+                    line-height: 1em;
+                    margin-right: 5px;
+                    color: $primaryColor;
+                }
+            }
+            hr{
+                margin:5px 0px 5px 0px;
+            }
+            .size-row{
+                padding: 0px 5px 0px 5px;
+                margin-bottom: 3px;
+                a{
+                    text-decoration: none;
+                    font-size: 14px;
+                    color: $primaryColor;
+                    font-weight: 600;
+                    line-height: 1.8em;
+    
+                    @include desktop1024px{
+                        font-size: 12px;
+                    }
+    
+                }
+                &:hover{
+                    background-color: #ddd;
+                }
+            }
+        }
+        .product-type{
+            margin: 10px 0px;
+            .type-heading{
+                display: flex;
+                align-items: center;
+                margin-bottom: 5px;
+                h4{
+                    font-size: 18px;
+                    color: $primaryColor;
+    
+                    @include desktop1024px{
+                        font-size: 14px;
+                    }
+                    @include tablet768px{
+                        font-size: 12px;
+                    }
+                }
+                span{
+                    font-size: 24px;
+                    line-height: 1em;
+                    margin-right: 5px;
+                    color: $primaryColor;
+                }
+            }
+            hr{
+                margin:5px 0px 5px 0px;
+            }
+            .type-row{
+                padding: 0px 5px 0px 5px;
+                margin-bottom: 3px;
+                a{
+                    text-decoration: none;
+                    font-size: 14px;
+                    color: $primaryColor;
+                    font-weight: 600;
+                    line-height: 1.8em;
+    
+                    @include desktop1024px{
+                        font-size: 12px;
+                    }
+    
+                }
+                &:hover{
+                    background-color: #ddd;
+                }
+            }
+        }
+        .product-material{
+            margin: 10px 0px;
+            .material-heading{
+                display: flex;
+                align-items: center;
+                margin-bottom: 5px;
+                h4{
+                    font-size: 18px;
+                    color: $primaryColor;
+    
+                    @include desktop1024px{
+                        font-size: 14px;
+                    }
+                    @include tablet768px{
+                        font-size: 12px;
+                    }
+                }
+                span{
+                    font-size: 24px;
+                    line-height: 1em;
+                    margin-right: 5px;
+                    color: $primaryColor;
+                }
+            }
+            hr{
+                margin:5px 0px 5px 0px;
+            }
+            .material-row{
+                padding: 0px 5px 0px 5px;
+                margin-bottom: 3px;
+                a{
+                    text-decoration: none;
+                    font-size: 14px;
+                    color: $primaryColor;
+                    font-weight: 600;
+                    line-height: 1.8em;
+    
+                    @include desktop1024px{
+                        font-size: 12px;
+                    }    
+                }
+                &:hover{
+                    background-color: #ddd;
+                }
+            }
+        }
+    }
+    .product-filters{
+        display: flex;
+        flex-direction: column;
+        display: unset !important;
+        .size-filter{
+            width: 100%;
+            margin-bottom: 15px;
+            margin-top: 15px;
+            text-align: center;
+            select{
+                border: 1px solid #ddd;
+                padding: 10px 5px;
+                outline: none;
+                background-color: #fff;
+                @include tablet768px{
+                    width: 80% !important;
+                }
+            }
+        }
+        .order-filter{
+            margin-bottom: 15px;
+            width: 100%;
+            text-align: center;
+            select{
+                border: 1px solid #ddd;
+                padding: 10px 5px;
+                outline: none;
+                background-color: #fff;
+                @include tablet768px{
+                    width: 80% !important;
+                }
+            }
+        }
+        .condition-filter{
+            height: 20px;
+            border: 1px solid $primaryColor;
+            background-color: $primaryColor;
+            padding: 10px;
+            
+            cursor: pointer;
+            transition: 0.6s;
+
+            @include tablet768px{
+                margin: 0px 25px;
+            }
+
+            &:hover{
+                background-color: $secondColor;
+                transition: 0.6s;
+            }
+            p{
+                color: #fff;
+                font-size: 14px;
+                text-align: center;
+                @include desktop1024px{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    
+
+    @keyframes sidebar {
+        0%{
+            left: -200px;
+        }
+        100%{
+            left: 0;
+        }
+    }
+}

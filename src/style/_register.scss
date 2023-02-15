@@ -1,0 +1,145 @@
+#registerpage{
+    .registerpage{
+        width: 100%;
+        margin: 20px 0px;
+        .registerpage-container{
+            width: $containerWidth;
+            margin: 0 auto;
+
+            @include tablet768px{
+                width: $phoneContainerWidth;
+            }
+
+            .register-heading{
+                text-align: left;
+                margin-bottom: 15px;
+
+                @include phone414px{
+                    text-align: center;
+                }
+
+                h1{
+                    font-size: 32px;
+                    line-height: 1.3m;
+                    @include phone414px{
+                        font-size: 26px;
+                    }
+                    @include tablet768px{
+                        font-size: 28px;
+                    }
+                }
+            }
+            .register-login-row{
+                width: 100%;
+                display: flex;
+                padding: 20px 0px;
+
+                @include tablet998px{
+                    flex-direction: column;
+                }
+
+                .register-col{
+                    width: 50%;
+                    padding-right: 50px;
+                    border-right: 1px solid #ddd;
+
+                    @include tablet998px{
+                        border-bottom: 1px solid #ddd;
+                        border-right: 0px;
+                        width: 100%;
+                        padding-bottom: 30px;
+                        padding-right: 0px;
+                    }
+
+                    .register-form{
+                        margin-top: 15px;
+                        width: 100%;
+                        .form{
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                            input{
+                                width: auto;
+                                margin-bottom: 15px;
+                                padding: 0px 20px;
+                                height: 50px;
+                                border: 1px solid #ddd;
+                                font-size: 14px;
+                                outline: none;
+                            }
+
+                            p{
+                                font-size: 16px;
+                            }
+                            select{
+                                height: 50px;
+                                border: 1px solid #ddd;
+                                padding-left: 20px;
+                                margin-bottom: 15px;
+                                background-color: #fff;
+                            }
+                            a{
+                                width: 100%;
+                                background-color: $primaryColor;
+                                height: 50px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                text-decoration: none;
+                                color: #fff;
+                                cursor: pointer;
+                                transition: 0.6s;
+                                &:hover{
+                                    transition: 0.6s;
+                                    opacity: 0.8;
+                                }
+                            }
+                        }
+                    }
+                    
+
+                }
+                .login-col{
+                    width: 50%;
+                    padding-left: 50px;
+
+                    @include tablet998px{
+                        width: 100%;
+                        padding-left: 0px;
+                        padding-top: 30px;
+                    }
+
+                    
+                    .user-icon{
+                        display: flex;
+                        justify-content: center;
+                        margin-bottom: 15px;
+                        img{
+                            width: 64px;
+                            height: 64px;
+                        }
+                    }
+                }
+                .login-btn{
+                    margin-bottom: 15px;
+                    a{
+                        width: 100%;
+                        background-color: $primaryColor;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-decoration: none;
+                        color: #fff;
+                        cursor: pointer;
+                        transition: 0.6s;
+                        &:hover{
+                            transition: 0.6s;
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

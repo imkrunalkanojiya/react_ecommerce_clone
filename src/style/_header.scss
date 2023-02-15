@@ -1,0 +1,371 @@
+#header{
+    .topbar{
+        width: 100%;
+        .topbar-container{
+            width: auto;
+            height: 40px;
+            margin: 0 auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color: $primaryColor;
+        }
+    }
+    .middlebar{
+        width: 100%;
+
+        @include tablet768px{
+            display: none;
+        }
+
+        .middlebar-container{
+            width: $containerWidth;
+            margin: 0 auto;
+            padding: 20px 0px;
+            .row{
+                width: 100%;
+                display: flex;
+                .logo-col{
+                    width: 15%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    a{
+                        img{
+                            width: 140px;
+                            cursor: pointer;
+
+                            @include desktop1440px{
+                                width: 128px;
+                            }
+
+                            @include desktop1280px{
+                                width: 118px;
+                            }
+
+                            @include tablet998px{
+                                width: 90px;
+                            }
+                        }
+                    }
+                    
+                }
+                .searchbar-col{
+                    width: 70%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    select{
+                        height: 40px;
+                        width: 100px;
+                        background-color: #ddd;
+                        outline: none;
+                        border-top-left-radius: 5px;
+                        border-bottom-left-radius: 5px;
+                        border:1px solid#d5cbc0;
+                        z-index: 5;
+                        margin-right: -5px;
+                        padding: 0px 5px;
+
+                        @include tablet998px{
+                            width: 80px;
+                        }
+
+                    }
+                    input{
+                        z-index: 4;
+                        width: 60%;
+                        height: 38px;
+                        border:1px solid#d5cbc0;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        outline: none;
+                        margin-right: -5px;
+
+                        @include desktop1280px{
+                            width: 40%;
+                        }
+                    }
+                    .search-icon{
+                        background-color: $primaryColor;
+                        height: 40px;
+                        width: 60px;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                        display: flex;
+                        justify-content: center;
+                        align-items:center ;
+                        cursor: pointer;
+                        transition: 0.6s;
+                        padding: 0px;
+                        &:hover{
+                            background-color: $primaryColor;
+                            opacity:0.9;
+                            transition: 0.6s;
+                        }
+                        img{
+                            width: 18px;
+                        }   
+                    }
+                }
+                .cart-col{
+                    width: 15%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    .account-block{
+                        text-decoration: none;
+                        border-radius: 100px;
+                        width: auto;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        img{
+                            width: 18px;
+                        }
+                        p{
+                            font-size: 12px;
+                            line-height: 1.6em;
+                            margin-left: 5px;
+                            font-weight: 600;
+                            color: $primaryColor;
+                            @include desktop1280px{
+                                display: none;
+                            }
+                        }     
+                    }
+                    .cart-block{
+                        text-decoration: none;
+                        margin-left: 10px;
+                        border-radius: 100px;
+                        width: auto;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        
+                        img{
+                            width: 18px;
+                        }     
+                        p{
+                            font-size: 12px;
+                            line-height: 1.6em;
+                            margin-left: 5px;
+                            font-weight: 600;
+                            color: $primaryColor;
+                            @include desktop1280px{
+                                display: none;
+                            }
+                        }  
+                    }
+                }
+            }
+        }
+    }
+    .middlebar-tablet{
+        display: none;
+
+        @include tablet768px{
+            display: unset;
+            width: 100%;
+            .middlebar-container-logo{
+                width: $containerWidth;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 0px;
+                align-items: center;
+                margin-bottom: -10px;
+                @include phone414px{
+                    flex-direction: row;
+                }
+
+                @include tablet768px{
+                    width: $phoneContainerWidth;
+                }
+
+                .logo-col{
+                    img{
+                        width: 78px;
+                    }
+                }
+                .cart-col{
+                    
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    @include phone414px{
+                        margin-bottom: 5px;
+                    }
+
+                    .account-block{
+                        text-decoration: none;
+                        border-radius: 100px;
+                        width: auto;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        img{
+                            width: 18px;
+
+                            @include phone414px{
+                                width: 20px;
+                                margin-left: 5px;
+                            }
+
+                        }
+                        p{
+                            font-size: 12px;
+                            line-height: 1.6em;
+                            margin-left: 5px;
+                            font-weight: 600;
+                            color: $primaryColor;
+                            
+                            @include phone414px{
+                                display: none;
+                            }
+                        }     
+                    }
+                    .cart-block{
+                        text-decoration: none;
+                        margin-left: 10px;
+                        border-radius: 100px;
+                        width: auto;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        
+                        img{
+                            width: 18px;
+                            @include phone414px{
+                                width: 20px;
+                                margin-left: 5px;
+                            }
+                        }     
+                        p{
+                            font-size: 12px;
+                            line-height: 1.6em;
+                            margin-left: 5px;
+                            font-weight: 600;
+                            color: $primaryColor;
+                            @include phone414px{
+                                display: none;
+                            }
+                        }  
+                    }
+                    .search-icon{
+                        margin-left: 10px;
+                        text-decoration: none;
+                        display: flex;
+                        align-items: center;
+                        img{
+                            width: 18px;
+                            @include phone414px{
+                                width: 20px;
+                                margin-left: 5px;
+                            }
+                        }
+                        p{
+                            font-size: 12px;
+                            line-height: 1.6em;
+                            margin-left: 5px;
+                            font-weight: 600;
+                            color: $primaryColor;
+                            @include phone414px{
+                                display: none;
+                            }
+                        }  
+                    }
+                }
+            }
+            .middlebar-container-search{
+                width: $containerWidth;
+                margin: 0 auto;
+                padding-bottom: 10px;
+
+                @include tablet768px{
+                    display: none;
+                }
+
+                .searchbar{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    select{
+                        height: 40px;
+                        width: 100px;
+                        background-color: #ddd;
+                        outline: none;
+                        border-top-left-radius: 5px;
+                        border-bottom-left-radius: 5px;
+                        border:1px solid#d5cbc0;
+                        z-index: 5;
+                        margin-right: -5px;
+                        padding: 0px 5px;
+
+                        @include phone414px{
+                            height: 32px;
+                            width: 52px;
+                        }
+
+                    }
+                    input{
+                        z-index: 4;
+                        width: 100%;
+                        height: 38px;
+                        border:1px solid#d5cbc0;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        outline: none;
+                        margin-right: -5px;
+
+                        @include phone414px{
+                            height: 30px;
+                        }
+                    }
+                    .search-icon{
+                        background-color: $primaryColor;
+                        height: 40px;
+                        width: 60px;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                        display: flex;
+                        justify-content: center;
+                        align-items:center ;
+                        cursor: pointer;
+                        transition: 0.6s;
+                        padding: 0px 10px;
+
+                        @include phone414px{
+                            height: 32px;
+                        }
+
+                        &:hover{
+                            background-color: $primaryColor;
+                            opacity:0.9;
+                            transition: 0.6s;
+                        }
+                        img{
+                            width: 18px;
+                            @include phone414px{
+                                width: 14px;
+                            }
+                        }   
+                    }
+                }
+            }
+        }
+    }
+    
+}
